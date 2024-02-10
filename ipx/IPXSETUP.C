@@ -418,3 +418,16 @@ doomcom.intnum++)
 	 }
 
 
+
+
+void sample(int nameLength) {
+	char name[100];
+	char* name2 = malloc(nameLength * sizeof(char));
+	strcpy(name2, "Test");
+
+	int weird = (int)(*(name2 + 3));
+	printf("Weird = %d", weird); // Weird = 116
+
+	free(name2);
+}
+
